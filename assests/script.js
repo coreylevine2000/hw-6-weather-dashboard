@@ -28,6 +28,7 @@ if (JSON.parse(localStorage.getItem("searchHistory")) === null) {
     renderSearchHistory();
 }
 
+// To allow search button without page refreshing
 searchBtn.on("click", function(e) {
     e.preventDefault();
     getWeather(searchInput.val());
@@ -91,7 +92,6 @@ function getWeather(desiredCity) {
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderedWeatherIcon, uvData.value);
                 renderSearchHistory(cityObj.cityName);
             }else{
-                console.log("City already in searchHistory. Not adding to history list")
                 let renderedWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderedWeatherIcon, uvData.value);
             }
@@ -106,7 +106,6 @@ function getWeather(desiredCity) {
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderedWeatherIcon, uvData.value);
                 renderSearchHistory(cityObj.cityName);
             }else{
-                console.log("City already in searchHistory. Not adding to history list")
                 let renderedWeatherIcon = `https:///openweathermap.org/img/w/${cityObj.cityWeatherIconName}.png`;
                 renderWeatherData(cityObj.cityName, cityObj.cityTemp, cityObj.cityHumidity, cityObj.cityWindSpeed, renderedWeatherIcon, uvData.value);
             }
