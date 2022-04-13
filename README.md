@@ -7,3 +7,5 @@ Upon searching, user will be allowed to select previous cities searched without 
 Links:
 GIT: https://github.com/coreylevine2000/hw-6-weather-dashboard
 LIVE: https://coreylevine2000.github.io/hw-6-weather-dashboard/
+
+![plot](./images/weather.PNG)
